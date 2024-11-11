@@ -1,0 +1,252 @@
+{
+  "continents": [
+    {
+      "id": 1,
+      "name": "Africa",
+      "countries": [
+        {
+          "name": "South Africa",
+          "capital": "Pretoria (administrative), Cape Town (legislative), Bloemfontein (judicial)",
+          "population": "59 million",
+          "safety-score": "3.5",
+          "expenses": "$$ (Moderate)",
+          "description": "Known for its diverse ecosystems, wildlife, and beautiful landscapes."
+        },
+        {
+          "name": "Morocco",
+          "capital": "Rabat",
+          "population": "37 million",
+          "safety-score": "4.0",
+          "expenses": "$ (Affordable)",
+          "description": "A cultural crossroads with rich traditions, markets, and historic cities."
+        },
+        {
+          "name": "Tanzania",
+          "capital": "Dodoma",
+          "population": "61 million",
+          "safety-score": "4.2",
+          "expenses": "$$ (Moderate)",
+          "description": "Home to Mount Kilimanjaro, Serengeti National Park, and Zanzibar’s beaches."
+        },
+        {
+          "name": "Egypt",
+          "capital": "Cairo",
+          "population": "109 million",
+          "safety-score": "3.8",
+          "expenses": "$ (Affordable)",
+          "description": "Famous for its ancient history, pyramids, and the Nile River."
+        },
+        {
+          "name": "United Arab Emirates",
+          "capital": "Abu Dhabi",
+          "population": "9.9 million",
+          "safety-score": "4.5",
+          "expenses": "$$$ (Expensive)",
+          "description": "A dynamic country with futuristic architecture and desert landscapes."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Asia",
+      "countries": [
+        {
+          "name": "Japan",
+          "capital": "Tokyo",
+          "population": "126 million",
+          "safety-score": "4.7",
+          "expenses": "$$$ (Expensive)",
+          "description": "Known for its unique blend of tradition and modernity, cherry blossoms, and advanced technology."
+        },
+        {
+          "name": "South Korea",
+          "capital": "Seoul",
+          "population": "52 million",
+          "safety-score": "4.6",
+          "expenses": "$$ (Moderate)",
+          "description": "A vibrant country known for its technology, pop culture, and delicious cuisine."
+        },
+        {
+          "name": "Thailand",
+          "capital": "Bangkok",
+          "population": "69 million",
+          "safety-score": "4.0",
+          "expenses": "$ (Affordable)",
+          "description": "Popular for its tropical beaches, ancient temples, and street food."
+        },
+        {
+          "name": "Indonesia",
+          "capital": "Jakarta",
+          "population": "273 million",
+          "safety-score": "3.5",
+          "expenses": "$ (Affordable)",
+          "description": "Known for its stunning islands, volcanic landscapes, and diverse culture."
+        },
+        {
+          "name": "Sri Lanka",
+          "capital": "Colombo",
+          "population": "21 million",
+          "safety-score": "3.8",
+          "expenses": "$ (Affordable)",
+          "description": "An island nation with beautiful beaches, wildlife, and cultural heritage."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Australia/Oceania",
+      "countries": [
+        {
+          "name": "New Zealand",
+          "capital": "Wellington",
+          "population": "5 million",
+          "safety-score": "4.8",
+          "expenses": "$$$ (Expensive)",
+          "description": "Known for its stunning landscapes, outdoor activities, and friendly locals."
+        },
+        {
+          "name": "Australia",
+          "capital": "Canberra",
+          "population": "25 million",
+          "safety-score": "4.5",
+          "expenses": "$$$ (Expensive)",
+          "description": "A large country with diverse ecosystems, beautiful beaches, and vibrant cities."
+        },
+        {
+          "name": "French Polynesia",
+          "capital": "Papeete",
+          "population": "280,000",
+          "safety-score": "4.3",
+          "expenses": "$$$$ (Very Expensive)",
+          "description": "A paradise of tropical islands, crystal-clear waters, and luxurious resorts."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Europe",
+      "countries": [
+        {
+          "name": "Norway",
+          "capital": "Oslo",
+          "population": "5.4 million",
+          "safety-score": "4.9",
+          "expenses": "$$$ (Expensive)",
+          "description": "Famous for its fjords, Northern Lights, and high quality of life."
+        },
+        {
+          "name": "Denmark",
+          "capital": "Copenhagen",
+          "population": "5.8 million",
+          "safety-score": "4.7",
+          "expenses": "$$$ (Expensive)",
+          "description": "Known for its historic landmarks, sustainable living, and cozy lifestyle (hygge)."
+        },
+        {
+          "name": "Netherlands",
+          "capital": "Amsterdam",
+          "population": "17 million",
+          "safety-score": "4.5",
+          "expenses": "$$ (Moderate)",
+          "description": "Famous for its canals, tulips, and vibrant art scene."
+        },
+        {
+          "name": "Sweden",
+          "capital": "Stockholm",
+          "population": "10 million",
+          "safety-score": "4.8",
+          "expenses": "$$$ (Expensive)",
+          "description": "Known for its innovation, nature, and high standard of living."
+        },
+        {
+          "name": "Switzerland",
+          "capital": "Bern",
+          "population": "8.6 million",
+          "safety-score": "4.9",
+          "expenses": "$$$$ (Very Expensive)",
+          "description": "Renowned for its mountains, chocolates, and high safety standards."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "North America",
+      "countries": [
+        {
+          "name": "USA",
+          "capital": "Washington, D.C.",
+          "population": "331 million",
+          "safety-score": "4.2",
+          "expenses": "$$$ (Expensive)",
+          "description": "A large and diverse country with varied landscapes and cultural influences."
+        },
+        {
+          "name": "Puerto Rico",
+          "capital": "San Juan",
+          "population": "3.2 million",
+          "safety-score": "4.0",
+          "expenses": "$$ (Moderate)",
+          "description": "Known for its beautiful beaches, tropical climate, and historic sites."
+        },
+        {
+          "name": "Panama",
+          "capital": "Panama City",
+          "population": "4.3 million",
+          "safety-score": "4.0",
+          "expenses": "$$ (Moderate)",
+          "description": "A vibrant country with a mix of natural beauty and urban culture."
+        },
+        {
+          "name": "Costa Rica",
+          "capital": "San José",
+          "population": "5.1 million",
+          "safety-score": "4.6",
+          "expenses": "$$ (Moderate)",
+          "description": "Famous for its biodiversity, eco-tourism, and friendly locals."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "South America",
+      "countries": [
+        {
+          "name": "Colombia",
+          "capital": "Bogotá",
+          "population": "50 million",
+          "safety-score": "3.8",
+          "expenses": "$ (Affordable)",
+          "description": "A country with rich history, coffee plantations, and beautiful landscapes."
+        },
+        {
+          "name": "Peru",
+          "capital": "Lima",
+          "population": "33 million",
+          "safety-score": "4.0",
+          "expenses": "$ (Affordable)",
+          "description": "Home to the Andes, Machu Picchu, and diverse ecosystems."
+        },
+        {
+          "name": "Argentina",
+          "capital": "Buenos Aires",
+          "population": "45 million",
+          "safety-score": "4.1",
+          "expenses": "$$ (Moderate)",
+          "description": "Known for tango, delicious cuisine, and scenic landscapes."
+        },
+        {
+          "name": "Bolivia",
+          "capital": "Sucre (constitutional), La Paz (administrative)",
+          "population": "12 million",
+          "safety-score": "3.7",
+          "expenses": "$ (Affordable)",
+          "description": "Famous for its high-altitude cities, salt flats, and indigenous cultures."
+        },
+        {
+          "name": "Chile",
+          "capital": "Santiago",
+          "population": "19 million",
+          "safety-score": "4.3",
+          "expenses": "$$ (Moderate)",
+          "description": "Stunning landscapes from the Atacama Desert to Patagonia"
+        }]}]}
