@@ -5,7 +5,7 @@ export default function Header() {
     <Navbar className="bg-zinc-50 w-full shadow-lg py-5">
     <div className="w-full max-w-screen-lg mx-auto flex items-center justify-between">
       <NavbarBrand>
-        <p className="font-bold dark:border-gray-500 text-1xl mt-5 justify-start">NOMAD TRAVEL</p>
+        <Link href="http://localhost:3000/" className="font-bold dark:border-gray-500 text-1xl mt-5 justify-start">NOMAD TRAVEL</Link>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-10 text-xl font-bold text-lime-500 justify-center flex-grow">
         <NavbarItem>
@@ -26,10 +26,10 @@ export default function Header() {
       </NavbarContent>
       <NavbarContent className="text-1xl font-bold dark:border-gray-500 gap-5 ml-20">
         <NavbarItem className="hidden lg:flex underline decoration-solid">
-          <Link href="#">Login</Link>
+          <Link href="/api/auth/signin">Login</Link>
         </NavbarItem>
         <NavbarItem className="underline decoration-solid">
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button  color="primary" href="#" variant="flat">
             Sign Up
           </Button>
         </NavbarItem>
