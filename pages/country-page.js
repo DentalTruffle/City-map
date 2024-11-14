@@ -1,63 +1,67 @@
-import { useRouter } from "next/router";
 import { useState, useEffect } from 'react';
-import  {continents}  from "@/data/continents.json";
-import Header from '@/components/Header';
+import { useRouter } from 'next/router';
 import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 
 export default function CountryPage() {
   const router = useRouter();
-  const { continentId } = router.query;
-  
-  const [selectedContinent, setSelectedContinent] = useState('');
-  const [countries, setCountries] = useState([]);
-
-  const handleContinentChange = (e) => {
-    const selected = e.target.value;
-    setSelectedContinent(selected);
-    
-    const continent = continents.find(cont => cont.name === selected);
-    if (continent) {
-      router.push(`/country-page?continentId=${continent.id}`);
-    }};
+  const { countryData } = router.query;
+  const [country, setCountry] = useState(null);
 
   useEffect(() => {
-    if (continentId) {
-      const continent = continents.find(cont => cont.id === parseInt(continentId));
-      if (continent) {
-        setCountries(continent.countries);
-      }}
-  }, [continentId]);
+    if (countryData) {
+      try {
+        const parsedData = JSON.parse(countryData);
+        setCountry(parsedData);
+      } catch (error) {
+        console.error('Failed to parse country data:', error);
+      }
+    }
+  }, [countryData]);
+
+  const handleSaveToFavourites = async () => {
+    try {
+      const response = await fetch('/api/favourites-countries', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ country }),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to save country');
+      }
+      alert('Country saved to favourites!');
+    } catch (error) {
+      console.error('Error saving country:', error);
+      alert('Something went wrong while saving the country.');
+    }
+  };
 
   return (
     <>
       <Header />
       <main className="flex flex-col items-center bg-gradient-to-b from-zinc-50 to-lime-200 min-h-screen p-4">
-        <div className="w-full max-w-sm mx-auto mt-10">
-          <h1 className="text-3xl font-bold mb-6 text-center">Select a Continent</h1>
-          <label className="block mb-2">Continent:</label>
-          <select 
-            value={selectedContinent} 
-            onChange={handleContinentChange} 
-            className="w-full p-2 border rounded-md mb-6"
-          >
-            <option>Select a continent</option>
-            {continents.map(cont => (
-              <option key={cont.id} value={cont.name}>{cont.name}</option>
-            ))}
-          </select>
-
-          {countries.length > 0 && (
-            <>
-              <label className="block mb-2">Countries:</label>
-              <select className="w-full p-2 border rounded-md">
-                <option>Select a country</option>
-                {countries.map(country => (
-                  <option key={country.name} value={country.name}>{country.name}</option>
-                ))}
-              </select>
-            </>
-          )}
+        <h1 className="text-3xl font-bold mb-4">Country Information</h1>
+        <div className="p-6 max-w-lg mx-auto bg-white rounded-xl shadow-md space-y-4">
+          <h1 className="text-2xl font-bold">{country.name.common}</h1>
+          <ul>
+            <li><strong>Capital:</strong> {country.capital}</li>
+            <li><strong>Population:</strong> {country.population.toLocaleString()}</li>
+            <li><strong>Region:</strong> {country.region}</li>
+            <li><strong>Subregion:</strong> {country.subregion}</li>
+            <li><strong>Currency:</strong> {Object.values(country.currencies)[0]?.name}</li>
+            <li><strong>Languages:</strong> {Object.values(country.languages).join(', ')}</li>
+            <li><strong>Flag:</strong> <img src={country.flags.png} alt={`Flag of ${country.name.common}`} width={100} /></li>
+          </ul>
         </div>
+        <button
+          onClick={handleSaveToFavourites}
+          className="rounded-md bg-slate-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
+        >
+          Save to Favourites
+        </button>
       </main>
       <Footer />
     </>
