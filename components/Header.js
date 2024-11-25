@@ -14,7 +14,7 @@ export default function Header() {
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="/country-page" aria-current="page">
+          <Link href="/destinations" aria-current="page">
             Destinations
           </Link>
         </NavbarItem>
