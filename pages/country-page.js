@@ -28,7 +28,7 @@ export default function CountryPage() {
         },
         body: JSON.stringify({ country }),
       });
-      
+
       if (!response.ok) {
         throw new Error('Failed to save country');
       }
@@ -38,6 +38,19 @@ export default function CountryPage() {
       alert('Something went wrong while saving the country.');
     }
   };
+
+  if (!country) {
+    return (
+      <>
+        <Header />
+        <main className="flex flex-col items-center bg-gradient-to-b from-zinc-50 to-lime-200 min-h-screen p-4">
+          <h1 className="text-3xl font-bold mb-4">Country Information</h1>
+          <p>The country doesn't exist. Please try again.</p>
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>
@@ -51,9 +64,9 @@ export default function CountryPage() {
             <li><strong>Population:</strong> {country.population.toLocaleString()}</li>
             <li><strong>Region:</strong> {country.region}</li>
             <li><strong>Subregion:</strong> {country.subregion}</li>
-            <li><strong>Currency:</strong> {Object.values(country.currencies)[0]?.name}</li>
+            <li><strong>Currency:</strong> {Object.values(country.currencies)?.[0]?.name}</li>
             <li><strong>Languages:</strong> {Object.values(country.languages).join(', ')}</li>
-            <li><strong>Flag:</strong> <img src={country.flags.png} width={100} /></li>
+            <li><strong>Flag:</strong> <img src={country.flags.png} width={100} alt={`${country.name.common} flag`} /></li>
           </ul>
         </div>
         <button
