@@ -14,7 +14,7 @@ export default function Footer(){
                     <a href="/homepage" class="hover:underline me-4 md:me-6 text-base font-bold text-lime-500">About</a> 
                 </li>
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6 text-base font-bold text-lime-500">Privacy Policy</a> 
+                    <a href="/reviews" class="hover:underline me-4 md:me-6 text-base font-bold text-lime-500">Reviews</a> 
                 </li>
                 <li>
                     <a href="#" class="hover:underline text-base font-bold text-lime-500">Contact</a> 

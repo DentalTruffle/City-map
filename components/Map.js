@@ -3,7 +3,9 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 export default function Map() {
   const [location, setLocation] = useState(null);
-  const apiKey = "";
+  const apiKey = process.env.NEXT_PUBLIC_MAP_API_KEY;
+
+  console.log(process.env.NEXT_PUBLIC_MAP_API_KEY)
 
   const mapContainerStyle = {
     width: '80%',
@@ -24,9 +26,7 @@ export default function Map() {
         },
         (error) => {
           console.error("Error getting geolocation:", error);
-
-        }
-      );
+        });
     } else {
       alert("Geolocation is not supported by this browser.");
     }

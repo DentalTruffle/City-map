@@ -31,18 +31,14 @@ export default function AboutUs() {
               type="button"
               onClick={handleClick}
               className="mt-4 px-6 py-2 bg-green-500 text-white rounded-lg"
-            >
-              {showMap ? 'Map loaded' : 'My location'}
-            </button>
+            >My location </button>
           </div>
           <div className="w-1/2 p-4 flex justify-center">
             <img src="/images/pic1.webp" alt="Travel inspiration" className="rounded-lg shadow-lg size-auto mt-20 ml-40" />
           </div>
         </div>
-
-        {showMap && <Map />} 
-
-      </main>
+           {showMap && <Map />} 
+        </main>
       <Footer />
     </>
   );
